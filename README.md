@@ -17,10 +17,10 @@ On each plant, user can take note of the date that a plant receives water and se
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
+- **Category:** 
 - **Mobile:**
 - **Story:**
-- **Market:**
+- **Market:** HealthCare, Beauty
 - **Habit:**
 - **Scope:**
 
