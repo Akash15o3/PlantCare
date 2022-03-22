@@ -17,12 +17,12 @@ On each plant, user can take note of the date that a plant receives water and se
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:** 
-- **Mobile:**
-- **Story:**
-- **Market:** HealthCare, Beauty
-- **Habit:**
-- **Scope:**
+- **Category:** Lifestyle
+- **Mobile:** App is view and edit, uses camera, mobile first experience
+- **Story:** Allows user to add their plant in app, setup reminders, search for scientific names and have a dig into plant benifits.
+- **Market:** Users can create their personalized botonical garden. We will recommend plants based on their current plants. They can set reminders for care of the plant and look into benifits of it.
+- **Habit:** Users can add as many plants as they want. They can choose to opt for notifications and even go through the recommended list based on their current garden. 
+- **Scope:** We often forget the watering of plants but with this app, they will be reminded of state of the plant and with real time data they can take better care of their plants. 
 
 ## Product Spec
 
