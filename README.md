@@ -40,12 +40,22 @@ On each plant, user can take note of the date that a plant receives water and se
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+1. Login 
+ * Users must be able to log in to their profile
+2. Register
+ * Users can create a new account
+3. Stream
+ * Users can scroll through their list of plants
+4. Detail 
+ * Users can click on a plant to see more details (plant profile). 
+ * Users can also see facial expressions icons such as happy face for a few days when the plant first gets water, worried face when it feels thirsty (some days after the water), or crying face when its watering cycle is overdue.
+5. Creation 
+ * User inputs name (scientific name/nick name) and/or picture of their plants to create plants collection profile. 
+ * Users can take note of the date that a plant receives water and set a reminder for an amount of time of their choice. 
+6. Profile 
+ * User can view their identity and stats
+7. Calendar
+ * Users can view the watering schedule
 
 ### 3. Navigation
 
