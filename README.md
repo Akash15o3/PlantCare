@@ -61,18 +61,21 @@ On each plant, user can take note of the date that a plant receives water and se
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Home page
+* Plants page
+* Add Plant page
+* Schedule page
+* Account page
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Start page
+   * Login page -> Home page
+   * Sign up -> Account creation
+* Plant page
+   * Click on specific plant -> Details view
+ * Add Plant page -> Add location -> Add picture (optional) -> Set name
+ * Account page -> Change settings
 
 ## Wireframes
 <!-- [Add picture of your hand sketched wireframes in this section] -->
