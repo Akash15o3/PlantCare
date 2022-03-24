@@ -105,5 +105,14 @@ On each plant, user can take note of the date that a plant receives water and se
 <img width="252" alt="Screen Shot 2022-03-24 at 12 50 12 AM" src="https://user-images.githubusercontent.com/98489037/159867902-579c9fea-7f3e-4eaf-9b66-939913c95b12.png">
 
 ### [BONUS] Interactive Prototype
+#### Start page with user signup/login and logout
+![ezgif com-gif-maker (12)](https://user-images.githubusercontent.com/98489037/159871079-93b3ac3d-fff1-4d18-80f4-2110e07cd01d.gif)
 
+#### Home page and Plant page
+![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/98489037/159869172-dafa11b0-c26a-449c-b806-5e65efc0415c.gif)
 
+#### Add Page
+![ezgif com-gif-maker (10)](https://user-images.githubusercontent.com/98489037/159869520-37928cc4-3fa8-40d6-ad92-110e6a7580ad.gif)
+
+#### Schedule Page
+![ezgif com-gif-maker (11)](https://user-images.githubusercontent.com/98489037/159870670-4e171667-2ec3-4d55-ba0a-fbb51d26268b.gif)
