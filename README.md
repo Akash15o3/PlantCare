@@ -83,6 +83,26 @@ On each plant, user can take note of the date that a plant receives water and se
 
 
 ### [BONUS] Digital Wireframes & Mockups
+* Start Pages
+<img width="759" alt="Screen Shot 2022-03-24 at 12 45 00 AM" src="https://user-images.githubusercontent.com/98489037/159867082-2ac0a31b-78f0-49bd-afde-9b975c4a44ec.png">
+
+* Home Pages
+<img width="518" alt="Screen Shot 2022-03-24 at 12 45 22 AM" src="https://user-images.githubusercontent.com/98489037/159867133-afcf799c-652e-421d-a33e-1dff78d2f493.png">
+
+* Plants Pages
+<img width="997" alt="Screen Shot 2022-03-24 at 12 45 56 AM" src="https://user-images.githubusercontent.com/98489037/159867222-430dac54-eaa2-49b7-988b-7aba787f9168.png">
+
+* Add Pages
+<img width="998" alt="Screen Shot 2022-03-24 at 12 46 22 AM" src="https://user-images.githubusercontent.com/98489037/159867298-9f098f07-99c8-40b9-9a2a-b97059bde061.png">
+<img width="1001" alt="Screen Shot 2022-03-24 at 12 46 42 AM" src="https://user-images.githubusercontent.com/98489037/159867353-73180e42-1515-4021-aef3-1f6a4f56cd65.png">
+<img width="756" alt="Screen Shot 2022-03-24 at 12 46 58 AM" src="https://user-images.githubusercontent.com/98489037/159867394-ed626144-c275-4532-95bb-6c8a2c8a69e1.png">
+
+* Schedule Pages
+<img width="994" alt="Screen Shot 2022-03-24 at 12 49 38 AM" src="https://user-images.githubusercontent.com/98489037/159867819-357cb5a0-66d4-4b93-8511-9a2920aa1957.png">
+<img width="750" alt="Screen Shot 2022-03-24 at 12 49 55 AM" src="https://user-images.githubusercontent.com/98489037/159867860-edf3eec2-597d-4671-8ebf-e57aa1f725b7.png">
+
+* Account Pages
+<img width="252" alt="Screen Shot 2022-03-24 at 12 50 12 AM" src="https://user-images.githubusercontent.com/98489037/159867902-579c9fea-7f3e-4eaf-9b66-939913c95b12.png">
 
 ### [BONUS] Interactive Prototype
 
