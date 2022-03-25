@@ -30,13 +30,18 @@ On each plant, user can take note of the date that a plant receives water and se
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User logs in to view the tasks they have scheduled for that day as well as future tasks.
+* Logged in user can also view the list of their plants.
+* User can view the watering schedule of all their plants.
+* User can add a new plant (with image, name, watering schedule, location).
+* User can access the setting page.
+* User can filter the plants based on the location of the plants.
+* User can search for a plant.
+* User can see facial expression of the plant based on the water level.
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can see the scientific name of the plant and its care guide.
 
 ### 2. Screen Archetypes
 
