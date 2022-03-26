@@ -137,6 +137,7 @@ On each plant, user can take note of the date that a plant receives water and se
    | username      | String   | username |
    | email         | String   | email of the user |
    | password      | String   | password of the user |
+   | userimage     | File     | image of user |
   
 #### Plant Table
 
@@ -144,41 +145,57 @@ On each plant, user can take note of the date that a plant receives water and se
    | ------------- | -------- | ------------|
    | plantId       | String   | unique id for the plant (default field) |
    | nickname      | String   | nickname of the plant |
-   | image         | File     | image that plant |
+   | image         | File     | image of plant |
    | scientific name| String  | scientific name of the plant |
    | location      | String   | location of the plant |
    | status        | String   | facial expresson of the plants |
    | water level   | Number   | water level of the plant |
-   | updatedAt     | DateTime | last watered date |
+   | lastwatered     | DateTime | last watered date |
    | nextWater     | DateTime | next water date |
    
    
 ### Networking
 #### List of network requests by screen
+   - Signup Screen
+      - (Create/POST) Create a user
+   
+   - Login Screen
+      - (Read/GET) Login user
+      
    - Home Feed Screen
       - (Read/GET) Query all posts where user is author
          ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+         let query = PFQuery(className:"myPlants")
+         query.whereKey("username", equalTo: currentUser)
+         query.order(byDescending: "nextWater")
+         query.findObjectsInBackground { (nickname: [PFObject]?, error: Error?) in
             if let error = error { 
                print(error.localizedDescription)
-            } else if let posts = posts {
+            } else if let nickname = nickname {
                print("Successfully retrieved \(posts.count) posts.")
            // TODO: Do something with posts...
             }
          }
          ```
-      - (Create/POST) Create a new like on a post
-      - (Delete) Delete existing like
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
+      - (Create/POST) Add a new plant with name, scientific name and picture.
+      - (Delete) Delete existing existing plant
+      - (Update/POST) Update nickname
+      - (Read/GET) Search for a plant, get location
+      
+   - Status of the Plant Screen
+      - (Read/GET) GET Nickname, Scientific Name, Water Level, Last watered, Next water date and image
+   
    - Profile Screen
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile image
+
+   - Settings
+      - (POST) Log out user
+      - (READ/GET) Get account informations
+      - (POST) Change account informations like username, password, userimage 
+
+ 
+ 
 #### [OPTIONAL:] Existing API Endpoints
 ##### An API Of Ice And Fire
 - Base URL - [http://www.anapioficeandfire.com/api](http://www.anapioficeandfire.com/api)
