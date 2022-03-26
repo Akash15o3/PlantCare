@@ -128,18 +128,31 @@ On each plant, user can take note of the date that a plant receives water and se
 
 ## Schema 
 ### Models
-#### Post
+
+#### User Table
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the user post (default field) |
-   | author        | Pointer to User| image author |
-   | image         | File     | image that user posts |
-   | caption       | String   | image caption by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
-   | likesCount    | Number   | number of likes for the post |
-   | createdAt     | DateTime | date when post is created (default field) |
-   | updatedAt     | DateTime | date when post is last updated (default field) |
+   | userId        | String   | unique id for the user (default field) |
+   | username      | String   | username |
+   | email         | String   | email of the user |
+   | password      | String   | password of the user |
+  
+#### Plant Table
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | plantId       | String   | unique id for the plant (default field) |
+   | nickname      | String   | nickname of the plant |
+   | image         | File     | image that plant |
+   | scientific name| String  | scientific name of the plant |
+   | location      | String   | location of the plant |
+   | status        | String   | facial expresson of the plants |
+   | water level   | Number   | water level of the plant |
+   | updatedAt     | DateTime | last watered date |
+   | nextWater     | DateTime | next water date |
+   
+   
 ### Networking
 #### List of network requests by screen
    - Home Feed Screen
