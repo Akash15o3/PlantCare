@@ -193,6 +193,7 @@ On each plant, user can take note of the date that a plant receives water and se
       - (POST) Log out user
       - (READ/GET) Get account informations
       - (POST) Change account informations like username, password, userimage 
+      - (Update/PUT) Update notification settings 
 
  
  
