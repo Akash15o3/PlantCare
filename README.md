@@ -164,7 +164,8 @@ On each plant, user can take note of the date that a plant receives water and se
         user.password = passwordField.text
         user.email = emailField.text
         
-        let password = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z])(?=.*[0-9]).{6,}$")
+        let password = NSPredicate(format: "SELF MATCHES %@ ", 
+          "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z])(?=.*[0-9]).{6,}$")
         let isValid = isValidEmail(email: user.email)
         
         user.signUpInBackground { (success, error) in
@@ -184,7 +185,7 @@ On each plant, user can take note of the date that a plant receives water and se
             }
         }
         ```
-      - (Read/GET) check email validation
+      - [METHOD] check email validation
         ```swift
         func isValidEmail(email: String) -> bool {
           var returnVal = true
@@ -208,6 +209,44 @@ On each plant, user can take note of the date that a plant receives water and se
    
    - Login Screen
       - (Read/GET) Login user
+        ```swift
+        let username = usernameField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password){
+            (user, error) in
+            if(user != nil){
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+            else{
+                //print("Error \(String(describing: error?.localizedDescription))")
+                let msg = "Invalid Username/Password"
+                self.showToast(message: msg)
+            }
+        }
+        ```
+       -  [METHOD OPTIONAL] Toasting error message
+          ```swift
+          func showToast(message : String) {
+            //need to be ajusted
+            let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, 
+             y: self.view.frame.size.height-100, width: 200, height: 35))
+            toastLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.6)
+            toastLabel.textColor = UIColor.white
+            toastLabel.font = UIFont.systemFont(ofSize: 12)
+            toastLabel.textAlignment = .center;
+            toastLabel.text = message
+            toastLabel.alpha = 1.0
+            toastLabel.layer.cornerRadius = 10;
+            toastLabel.clipsToBounds  =  true
+            self.view.addSubview(toastLabel)
+            UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+              toastLabel.alpha = 0.0
+            }, completion: {(isCompleted) in
+              toastLabel.removeFromSuperview()
+            })
+          }
+          ```
       
    - Home Feed Screen
       - (Read/GET) Query all posts where user is author
