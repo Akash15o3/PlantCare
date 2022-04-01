@@ -248,7 +248,7 @@ On each plant, user can take note of the date that a plant receives water and se
           }
           ```
       
-   - Home Feed Screen
+  - Home Feed Screen
       - (Read/GET) Query all posts where user is author
          ```swift
          let query = PFQuery(className:"myPlants")
@@ -261,12 +261,62 @@ On each plant, user can take note of the date that a plant receives water and se
                print("Successfully retrieved \(posts.count) posts.")
            // TODO: Do something with posts...
             }
-         }
          ```
+         
       - (Create/POST) Add a new plant with name, scientific name and picture.
-      - (Delete) Delete existing existing plant
+      ```swift
+            let myPlant = PFObject(className:"myPlant")
+    myPlant["nickname"] = "james"
+    myPlant["photo"] = URL(...)
+    myPlant["location"] = "bedroom"
+    ....
+    myPlant.saveInBackground { (succeeded, error)  in
+        if (succeeded) {
+            // The object has been saved.
+        } else {
+            // There was a problem, check error.description
+        }
+        }
+    ```
+        
+      - (Delete) Delete existing plant
+      ```swift
+    let query = PFQuery(className:"myPlants")
+    query.deleteObjectInBackground(withId: "xWMyZEGZ") { (plantInfo: PFObject?, error: Error?) in
+    if let error = error {
+        print(error.localizedDescription)
+    } else if let plantInfo = plantInfo {
+       //do stuff
+    }
+        }
+    ```
       - (Update/POST) Update nickname
-      - (Read/GET) Search for a plant, get location
+      ```swift
+      let query = PFQuery(className:"myPlants")
+    query.getObjectInBackground(withId: "xWMyZEGZ") { (plantInfo: PFObject?, error: Error?) in
+    if let error = error {
+        print(error.localizedDescription)
+    } else if let plantInfo = plantInfo {
+        plantInfo["nickname"] = "new_nickname"
+        gameScore.saveInBackground()
+    }
+        }
+     ```
+
+      - (Read/GET) Search for a plant, get location, status, water level, last watered, or next water
+    ```swift
+         let query = PFQuery(className:"myPlants")
+         query.whereKey("username", equalTo: currentUser)
+         query.order(byDescending: "nextWater")
+         query.findObjectsInBackground { (nickname: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let nickname = nickname {
+               print("Successfully retrieved \(posts.count) posts.")
+           // TODO: Do something with posts...
+            }
+         }
+    ```
       
    - Status of the Plant Screen
       - (Read/GET) GET Nickname, Scientific Name, Water Level, Last watered, Next water date and image
