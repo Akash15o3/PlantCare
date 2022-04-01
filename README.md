@@ -7,6 +7,7 @@ Original App Design Project - README Template
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
+1. [Models](#Schema)
 
 
 ## Overview
@@ -124,3 +125,211 @@ On each plant, user can take note of the date that a plant receives water and se
 
 #### Schedule Page
 ![ezgif com-gif-maker (11)](https://user-images.githubusercontent.com/98489037/159870670-4e171667-2ec3-4d55-ba0a-fbb51d26268b.gif)
+
+## Schema 
+### Models
+
+#### User Table
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userId        | String   | unique id for the user (default field) |
+   | username      | String   | username |
+   | email         | String   | email of the user |
+   | password      | String   | password of the user |
+   | userimage     | File     | image of user |
+  
+#### Plant Table
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | plantId       | String   | unique id for the plant (default field) |
+   | nickname      | String   | nickname of the plant |
+   | image         | File     | image of plant |
+   | scientific name| String  | scientific name of the plant |
+   | location      | String   | location of the plant |
+   | status        | String   | facial expresson of the plants |
+   | water level   | Number   | water level of the plant |
+   | lastwatered     | DateTime | last watered date |
+   | nextWater     | DateTime | next water date |
+   
+   
+### Networking
+#### List of network requests by screen
+   - Signup Screen
+      - (Create/POST) Create a user
+        ```swift
+        var user = PFUser()
+        user.username = usernameField.text
+        user.password = passwordField.text
+        user.email = emailField.text
+        
+        let password = NSPredicate(format: "SELF MATCHES %@ ", 
+          "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z])(?=.*[0-9]).{6,}$")
+        let isValid = isValidEmail(email: user.email)
+        
+        user.signUpInBackground { (success, error) in
+            if(success && password.evaluate(with: user.password) && isValid){
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+            else{
+                if(!password.evaluate(with: user.password)){
+                    print("Password requirements do not fulfill!")
+                }
+                else if(!isValid){
+                    print("Invalid email address!")
+                }
+                else{
+                    print("Error \(String(describing: error?.localizedDescription))")
+                }
+            }
+        }
+        ```
+      - [METHOD] check email validation
+        ```swift
+        func isValidEmail(email: String) -> bool {
+          var returnVal = true
+          let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+          
+          do{
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0{
+              returnVal = false
+            }
+          } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnVal = false
+          }
+          return returnVal
+        }
+        ```
+   
+   - Login Screen
+      - (Read/GET) Login user
+        ```swift
+        let username = usernameField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password){
+            (user, error) in
+            if(user != nil){
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+            else{
+                //print("Error \(String(describing: error?.localizedDescription))")
+                let msg = "Invalid Username/Password"
+                self.showToast(message: msg)
+            }
+        }
+        ```
+       -  [METHOD OPTIONAL] Toasting error message
+          ```swift
+          func showToast(message : String) {
+            //need to be ajusted
+            let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, 
+             y: self.view.frame.size.height-100, width: 200, height: 35))
+            toastLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.6)
+            toastLabel.textColor = UIColor.white
+            toastLabel.font = UIFont.systemFont(ofSize: 12)
+            toastLabel.textAlignment = .center;
+            toastLabel.text = message
+            toastLabel.alpha = 1.0
+            toastLabel.layer.cornerRadius = 10;
+            toastLabel.clipsToBounds  =  true
+            self.view.addSubview(toastLabel)
+            UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+              toastLabel.alpha = 0.0
+            }, completion: {(isCompleted) in
+              toastLabel.removeFromSuperview()
+            })
+          }
+          ```
+      
+  - Home Feed Screen
+      - (Read/GET) Query all posts where user is author
+         ```swift
+         let query = PFQuery(className:"myPlants")
+         query.whereKey("username", equalTo: currentUser)
+         query.order(byDescending: "nextWater")
+         query.findObjectsInBackground { (nickname: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let nickname = nickname {
+               print("Successfully retrieved \(posts.count) posts.")
+           // TODO: Do something with posts...
+            }
+         ```
+         
+      - (Create/POST) Add a new plant with name, scientific name and picture.
+      ```swift
+            let myPlant = PFObject(className:"myPlant")
+    myPlant["nickname"] = "james"
+    myPlant["photo"] = URL(...)
+    myPlant["location"] = "bedroom"
+    ....
+    myPlant.saveInBackground { (succeeded, error)  in
+        if (succeeded) {
+            // The object has been saved.
+        } else {
+            // There was a problem, check error.description
+        }
+        }
+    ```
+        
+      - (Delete) Delete existing plant
+      ```swift
+    let query = PFQuery(className:"myPlants")
+    query.deleteObjectInBackground(withId: "xWMyZEGZ") { (plantInfo: PFObject?, error: Error?) in
+    if let error = error {
+        print(error.localizedDescription)
+    } else if let plantInfo = plantInfo {
+       //do stuff
+    }
+        }
+    ```
+      - (Update/POST) Update nickname
+      ```swift
+      let query = PFQuery(className:"myPlants")
+    query.getObjectInBackground(withId: "xWMyZEGZ") { (plantInfo: PFObject?, error: Error?) in
+    if let error = error {
+        print(error.localizedDescription)
+    } else if let plantInfo = plantInfo {
+        plantInfo["nickname"] = "new_nickname"
+        gameScore.saveInBackground()
+    }
+        }
+     ```
+
+      - (Read/GET) Search for a plant, get location, status, water level, last watered, or next water
+    ```swift
+         let query = PFQuery(className:"myPlants")
+         query.whereKey("username", equalTo: currentUser)
+         query.order(byDescending: "nextWater")
+         query.findObjectsInBackground { (nickname: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let nickname = nickname {
+               print("Successfully retrieved \(posts.count) posts.")
+           // TODO: Do something with posts...
+            }
+         }
+    ```
+      
+   - Status of the Plant Screen
+      - (Read/GET) GET Nickname, Scientific Name, Water Level, Last watered, Next water date and image
+   
+   - Profile Screen
+      - (Read/GET) Query logged in user object
+      - (Update/PUT) Update user profile image
+
+   - Settings
+      - (POST) Log out user
+      - (READ/GET) Get account informations
+      - (POST) Change account informations like username, password, userimage 
+      - (Update/PUT) Update notification settings 
+
+ 
+ 
