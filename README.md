@@ -158,6 +158,53 @@ On each plant, user can take note of the date that a plant receives water and se
 #### List of network requests by screen
    - Signup Screen
       - (Create/POST) Create a user
+        ```swift
+        var user = PFUser()
+        user.username = usernameField.text
+        user.password = passwordField.text
+        user.email = emailField.text
+        
+        let password = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z])(?=.*[0-9]).{6,}$")
+        let isValid = isValidEmail(email: user.email)
+        
+        user.signUpInBackground { (success, error) in
+            if(success && password.evaluate(with: user.password) && isValid){
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+            else{
+                if(!password.evaluate(with: user.password)){
+                    print("Password requirements do not fulfill!")
+                }
+                else if(!isValid){
+                    print("Invalid email address!")
+                }
+                else{
+                    print("Error \(String(describing: error?.localizedDescription))")
+                }
+            }
+        }
+        ```
+      - (Read/GET) check email validation
+        ```swift
+        func isValidEmail(email: String) -> bool {
+          var returnVal = true
+          let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+          
+          do{
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0{
+              returnVal = false
+            }
+          } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnVal = false
+          }
+          return returnVal
+        }
+        ```
    
    - Login Screen
       - (Read/GET) Login user
