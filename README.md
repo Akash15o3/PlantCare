@@ -87,8 +87,11 @@ On each plant, user can take note of the date that a plant receives water and se
 <!-- [Add picture of your hand sketched wireframes in this section] -->
 <!-- <img src="https://user-images.githubusercontent.com/65844160/159237393-7d79148a-0e75-436b-b4c8-cbeff0c36101.png" width=600>
 <img src="https://user-images.githubusercontent.com/65844160/159237391-2b336192-3682-43dd-874c-84c9c1fd79b5.png" width=600> -->
-![Page1](https://user-images.githubusercontent.com/65844160/159237393-7d79148a-0e75-436b-b4c8-cbeff0c36101.png)
-![Page2](https://user-images.githubusercontent.com/65844160/159237391-2b336192-3682-43dd-874c-84c9c1fd79b5.png)
+<!-- ![Page1](https://user-images.githubusercontent.com/65844160/159237393-7d79148a-0e75-436b-b4c8-cbeff0c36101.png)
+![Page2](https://user-images.githubusercontent.com/65844160/159237391-2b336192-3682-43dd-874c-84c9c1fd79b5.png) -->
+
+![Page1 (1)](https://user-images.githubusercontent.com/65844160/161410446-a05de4a1-b35f-461b-acc7-e574173d2819.png)
+![Page2 (1)](https://user-images.githubusercontent.com/65844160/161410445-71e01e60-9c2d-4979-9a60-76841983626e.png)
 
 
 ### [BONUS] Digital Wireframes & Mockups
