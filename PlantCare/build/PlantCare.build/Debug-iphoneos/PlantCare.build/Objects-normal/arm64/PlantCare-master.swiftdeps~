@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "88e8014bbbe3ed121de3e7e1a23cffc2a161ac088a53cbc54770cf564e97b3c9"
+build_start_time: [1649380651, 545763969]
+build_end_time: [1649380657, 214537143]
+inputs:
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/PlantCare/AppDelegate.swift": [1649198228, 546591281]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/PlantCare/LoginViewController.swift": [1649201482, 117417812]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/PlantCare/SceneDelegate.swift": [1649198228, 548025131]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/PlantCare/SignupViewController.swift": [1649208427, 840077877]

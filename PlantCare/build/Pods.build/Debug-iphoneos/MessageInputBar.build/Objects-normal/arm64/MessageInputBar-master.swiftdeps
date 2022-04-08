@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "a6cecef5a6ed667d1fad877a54cdc510e52b751cee87173da0877fd64ec60b17"
+build_start_time: [1649380602, 755559921]
+build_end_time: [1649380647, 597746849]
+inputs:
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Controls/InputBarButtonItem.swift": [1649198228, 567038297]
+  ? "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Extensions/NSMutableAttributedString+Extensions.swift"
+  : [1649198228, 567351341]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Extensions/UIView+Extensions.swift": [1649198228, 567515373]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/MessageInputBar.swift": [1649198228, 567886829]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Models/NSConstraintLayoutSet.swift": [1649198228, 568252563]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Protocols/InputItem.swift": [1649198228, 568609714]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Protocols/InputPlugin.swift": [1649198228, 568761348]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Protocols/MessageInputBarDelegate.swift": [1649198228, 568946838]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Views/InputStackView.swift": [1649198228, 569207668]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Views/InputTextView.swift": [1649198228, 569390535]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/MessageInputBar/Sources/Views/SeparatorLine.swift": [1649198228, 569540500]
