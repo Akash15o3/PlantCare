@@ -1,6 +1,9 @@
 Original App Design Project - README Template
 ===
 
+## Progress: Sprint 1
+5. GIF: ![ezgif com-gif-maker (9)](http://g.recordit.co/O2qwwMvG5U.gif)
+
 # Plant Care
 
 ## Table of Contents
