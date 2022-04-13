@@ -1,0 +1,14 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "b680fac9011e1d5f99f34160e37aee7ffd898189c3ae2759ffac51c6a4d30097"
+build_start_time: [1649380649, 352041959]
+build_end_time: [1649380651, 355431079]
+inputs:
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/AFIError.swift": !private [1649198228, 560089588]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/Image.swift": !private [1649198228, 560419559]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/ImageCache.swift": !private [1649198228, 560554981]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/ImageDownloader.swift": !private [1649198228, 560784339]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/ImageFilter.swift": !private [1649198228, 560970306]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/Request+AlamofireImage.swift": !private [1649198228, 561196327]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/UIButton+AlamofireImage.swift": !private [1649198228, 561341762]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/UIImage+AlamofireImage.swift": !private [1649198228, 561530351]
+  "/Users/kripeshranabhat/Desktop/PlantCare/PlantCare/Pods/AlamofireImage/Source/UIImageView+AlamofireImage.swift": !private [1649198228, 561810016]

@@ -1,0 +1,24 @@
+Target dependency graph (8 targets)
+Alamofire in Pods, no dependencies
+AlamofireImage in Pods, depends on:
+Alamofire in Pods (explicit)
+Bolts in Pods, no dependencies
+MessageInputBar in Pods, no dependencies
+Parse-Parse in Pods, depends on:
+Bolts in Pods (implicit dependency via options '-framework Bolts' in build setting 'OTHER_LDFLAGS')
+Parse in Pods, depends on:
+Bolts in Pods (explicit)
+Parse-Parse in Pods (explicit)
+Pods-PlantCare in Pods, depends on:
+Alamofire in Pods (explicit)
+AlamofireImage in Pods (explicit)
+Bolts in Pods (explicit)
+MessageInputBar in Pods (explicit)
+Parse in Pods (explicit)
+PlantCare in PlantCare, depends on:
+Pods-PlantCare in Pods (implicit dependency via file 'Pods_PlantCare.framework' in build phase 'Link Binary')
+Alamofire in Pods (implicit dependency via options '-framework Alamofire' in build setting 'OTHER_LDFLAGS')
+AlamofireImage in Pods (implicit dependency via options '-framework AlamofireImage' in build setting 'OTHER_LDFLAGS')
+Bolts in Pods (implicit dependency via options '-framework Bolts' in build setting 'OTHER_LDFLAGS')
+MessageInputBar in Pods (implicit dependency via options '-framework MessageInputBar' in build setting 'OTHER_LDFLAGS')
+Parse in Pods (implicit dependency via options '-framework Parse' in build setting 'OTHER_LDFLAGS')
