@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class PlantNameViewController: UIViewController {
     @IBOutlet weak var scientificNameLabel: UITextField!
@@ -18,6 +19,16 @@ class PlantNameViewController: UIViewController {
     }
     @IBAction func onNext(_ sender: Any) {
         if (scientificNameLabel != nil) {
+            let plant = PFObject(className: "Pets")
+            plant["scientficName"] = scientificNameLabel
+            plant["nicknameLabel"] = nicknameLabel
+            plant.saveInBackground{(success, error) in
+                if success {
+                    print("saved!")
+                } else {
+                    print("error!")
+                }
+            }
             // self.performSegue(withIdentifier: "identifier", sender: nil)
         } else {
             print("Please enter scientific name.")
