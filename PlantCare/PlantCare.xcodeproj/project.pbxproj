@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DB8479F280A39AB00320810 /* WateringScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8479E280A39AB00320810 /* WateringScheduleViewController.swift */; };
 		B7F1E92E27FCECB500759990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1E92D27FCECB500759990 /* AppDelegate.swift */; };
 		B7F1E93027FCECB500759990 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1E92F27FCECB500759990 /* SceneDelegate.swift */; };
 		B7F1E93227FCECB500759990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1E93127FCECB500759990 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		44F4C07862F253FF003135C6 /* Pods_PlantCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		771A5F0A293E747C32DEC69A /* Pods-PlantCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantCare.debug.xcconfig"; path = "Target Support Files/Pods-PlantCare/Pods-PlantCare.debug.xcconfig"; sourceTree = "<group>"; };
+		8DB8479E280A39AB00320810 /* WateringScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WateringScheduleViewController.swift; sourceTree = "<group>"; };
 		B45A0F618998272190E97844 /* Pods-PlantCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantCare.release.xcconfig"; path = "Target Support Files/Pods-PlantCare/Pods-PlantCare.release.xcconfig"; sourceTree = "<group>"; };
 		B7F1E92A27FCECB500759990 /* PlantCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F1E92D27FCECB500759990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +89,6 @@
 				771A5F0A293E747C32DEC69A /* Pods-PlantCare.debug.xcconfig */,
 				B45A0F618998272190E97844 /* Pods-PlantCare.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +132,7 @@
 				B7F1E93627FCECB700759990 /* Assets.xcassets */,
 				B7F1E93827FCECB700759990 /* LaunchScreen.storyboard */,
 				B7F1E93B27FCECB700759990 /* Info.plist */,
+				8DB8479E280A39AB00320810 /* WateringScheduleViewController.swift */,
 			);
 			path = PlantCare;
 			sourceTree = "<group>";
@@ -327,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB8479F280A39AB00320810 /* WateringScheduleViewController.swift in Sources */,
 				B7F1E93227FCECB500759990 /* ViewController.swift in Sources */,
 				B7F1E92E27FCECB500759990 /* AppDelegate.swift in Sources */,
 				B7F1E93027FCECB500759990 /* SceneDelegate.swift in Sources */,
