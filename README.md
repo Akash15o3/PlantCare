@@ -1,6 +1,20 @@
 Original App Design Project - README Template
 ===
 
+
+## Progress: Sprint 2
+ ![ezgif com-gif-maker (9)](http://g.recordit.co/CRmeQkcfDo.gif)
+ 
+ - [x] Added UI for Watering Schedule
+
+## To Do: Sprint 3
+ - [ ] Finish Loging+Sign Up
+ - [ ] Finish Add a plant page
+ - [ ] Add backend functionality for watering schedule
+ 
+ 
+
+
 ## Progress: Sprint 1
 5. GIF: ![ezgif com-gif-maker (9)](http://g.recordit.co/O2qwwMvG5U.gif)
 
