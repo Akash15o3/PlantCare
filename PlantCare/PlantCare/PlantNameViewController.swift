@@ -11,6 +11,7 @@ import Parse
 class PlantNameViewController: UIViewController {
     @IBOutlet weak var scientificNameLabel: UITextField!
     @IBOutlet weak var nicknameLabel: UITextField!
+    @IBOutlet weak var locationLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +19,11 @@ class PlantNameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func onNext(_ sender: Any) {
-        if (scientificNameLabel != nil) {
-            let plant = PFObject(className: "Pets")
-            plant["scientficName"] = scientificNameLabel
-            plant["nicknameLabel"] = nicknameLabel
+        if (scientificNameLabel != nil && locationLabel != nil) {
+            let plant = PFObject(className: "Plants")
+            plant["scientficName"] = scientificNameLabel.text
+            plant["nickname"] = nicknameLabel.text
+            plant["location"] = locationLabel.text
             plant.saveInBackground{(success, error) in
                 if success {
                     print("saved!")
@@ -29,9 +31,10 @@ class PlantNameViewController: UIViewController {
                     print("error!")
                 }
             }
+            // Segue to the next one
             // self.performSegue(withIdentifier: "identifier", sender: nil)
         } else {
-            print("Please enter scientific name.")
+            print("Please fill out all fields.")
         }
     }
     
