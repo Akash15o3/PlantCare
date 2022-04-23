@@ -1,6 +1,14 @@
 Original App Design Project - README Template
 ===
+## Progress: Sprint 3
+![ezgif com-gif-maker (9)](http://g.recordit.co/7LwQLm9fc0.gif)
 
+ - [x] Added UI for Plant Detail
+ - [x] Backend for Add Plant 
+
+## To Do:
+ - [ ] Demo Video
+ - [ ] Clean up the storyboard
 
 ## Progress: Sprint 2
  ![ezgif com-gif-maker (9)](http://g.recordit.co/CRmeQkcfDo.gif)
