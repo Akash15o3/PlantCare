@@ -16,6 +16,7 @@
 		B7F1E94527FCECB700759990 /* PlantCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1E94427FCECB700759990 /* PlantCareTests.swift */; };
 		B7F1E94F27FCECB700759990 /* PlantCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1E94E27FCECB700759990 /* PlantCareUITests.swift */; };
 		B7F1E95127FCECB700759990 /* PlantCareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1E95027FCECB700759990 /* PlantCareUITestsLaunchTests.swift */; };
+		D13EA48627FF93F40038E0DC /* PlantNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13EA48527FF93F40038E0DC /* PlantNameViewController.swift */; };
 		DF81643687F549E90BBB9241 /* Pods_PlantCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F4C07862F253FF003135C6 /* Pods_PlantCare.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		B7F1E94A27FCECB700759990 /* PlantCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F1E94E27FCECB700759990 /* PlantCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCareUITests.swift; sourceTree = "<group>"; };
 		B7F1E95027FCECB700759990 /* PlantCareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCareUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D13EA48527FF93F40038E0DC /* PlantNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,6 @@
 				771A5F0A293E747C32DEC69A /* Pods-PlantCare.debug.xcconfig */,
 				B45A0F618998272190E97844 /* Pods-PlantCare.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +132,7 @@
 				B7F1E93627FCECB700759990 /* Assets.xcassets */,
 				B7F1E93827FCECB700759990 /* LaunchScreen.storyboard */,
 				B7F1E93B27FCECB700759990 /* Info.plist */,
+				D13EA48527FF93F40038E0DC /* PlantNameViewController.swift */,
 			);
 			path = PlantCare;
 			sourceTree = "<group>";
@@ -329,6 +331,7 @@
 			files = (
 				B7F1E93227FCECB500759990 /* ViewController.swift in Sources */,
 				B7F1E92E27FCECB500759990 /* AppDelegate.swift in Sources */,
+				D13EA48627FF93F40038E0DC /* PlantNameViewController.swift in Sources */,
 				B7F1E93027FCECB500759990 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +512,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2R633X4QS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantCare/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -521,7 +525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PlantCare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PlantCare1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -537,6 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2R633X4QS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantCare/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -549,7 +554,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PlantCare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PlantCare1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
